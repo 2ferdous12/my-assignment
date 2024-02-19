@@ -129,7 +129,7 @@
         <div class="lg:space-x-3 sm:w-[200px] ">
             <button class="btn h-[70px] border-2 border-[#1DD100] space-x-3 solid">
                 <img src="images/seat-gray.png" alt="">
-                <p class=" text-[#1DD100]">40 Seats left</p>
+                <p  class=" text-[#1DD100]"><span id="total-sit">12 </span>Seats left</p>
             </button>
         </div>
     </div>
@@ -187,7 +187,7 @@
         
         </div>
         <div class="flex justify-between mb-5 mt-10">
-            <div class=" add-btn bg-gray-100 w-[70px] flex justify-center items-center h-[40px] rounded-lg">
+            <div onclick="buyTickets()" class=" add-btn bg-gray-100 w-[70px] flex justify-center items-center h-[40px] rounded-lg">
                 <p>A</p>
             </div>
             <div class=" add-btn bg-gray-100 w-[70px] flex justify-center items-center h-[40px] rounded-lg">
@@ -245,33 +245,38 @@
 
      <div class=" lg:w-[550px] mt-10">
         <h3 class="text-black text-bold text-xl">Select Your Seat</h3>
-        <div class="flex gap-[80px] lg:justify-between mt-5 ">
-            <p>Seat
-                <span id="bus-count" class="bg-[#1DD100] text-bold text-white">0</span>
-            </p>
-            <p>Class</p>
-            <p>price</p>
-        </div>
 
-        <div id="economy" class="flex justify-between mt-5 ">
-    <li class="flex flex-col">
+        <table>
+            <thead>
 
-    </li>
-        </div>
+            </thead>
+            <tbody id="economy" cl>
+                <tr>
+   <th class="p-10">Seat
+    <span id="bus-count" class="bg-[#1DD100] text-bold text-white">0</span>
+   </th>
+   <th class="p-10">Class</th>
+   <th class="p-10">price</th>
+                </tr>
+            </tbody>
+        </table>
+
+
+
         <div class="flex gap-[80px]  lg:justify-between mt-5">
             <h3 class="text-xl text-bold">Total Price</h3>
-            <h3 class="text-xl text-bold" >BDT <span>0</span></h3>
+            <h3 class="text-xl text-bold" >BDT <span id="Total-Cost">0</span></h3>
         </div>
 
-        <div class=" flex lg:justify-between mt-5 ">
+        <div id="apply-hide" class=" flex lg:justify-between mt-5 ">
             <input class=" bg-[#FFFFFF] " type="text"
         placeholder="Have any copupon?">
-        <button class="btn bg-[#1DD100] text-white">Apply</button>
+        <button id="apply" class="btn bg-[#1DD100] text-white">Apply</button>
         </div>
 
         <div class="flex gap-[80px] lg:justify-between mt-5 ">
             <h3 class="text-xl text-bold">Grand Total</h3>
-            <h3 class="text-xl text-bold" >BDT <span>0</span></h3>
+            <h3 class="text-xl text-bold" >BDT <span id="Grand-total">0</span></h3>
         </div>
 
 <div class="w-[300px]">
