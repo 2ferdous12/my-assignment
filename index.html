@@ -106,7 +106,7 @@
     </section>
 
 
-    <section id="middle-section" class=" hidden mt-16 max-w-[1300px] p-[10px] lg:p-[70px] mx-auto border-t-8 border-t-[#1DD100] ">
+    <section id="middle-section" class=" mt-16 max-w-[1300px] p-[10px] lg:p-[70px] mx-auto border-t-8 border-t-[#1DD100] ">
  <div class="flex justify-center"> 
     <div class="text-center space-y-4">
         <h3 class="text-center  text-4xl font-bold text-black">P.H Paribahan</h3>
@@ -129,7 +129,7 @@
         <div class="lg:space-x-3 sm:w-[200px] ">
             <button class="btn h-[70px] border-2 border-[#1DD100] space-x-3 solid">
                 <img src="images/seat-gray.png" alt="">
-                <p  class=" text-[#1DD100]"><span id="total-sit">12 </span>Seats left</p>
+                <p  class=" text-[#1DD100]"><span id="total-sit"> 12</span>Seats left</p>
             </button>
         </div>
     </div>
@@ -155,8 +155,11 @@
   
             <div id="ticit-price" class=" w-[270px] p-4 text-center ">
            <img class="mx-auto" src="images/fare.png" alt="">
-               <h3 class="text-black font-bold text-3xl">550 Taka
-              </h3>
+               <h3 class="text-black font-bold text-3xl">
+               Taka</h3>
+               <span  id="main-price">550</span>
+
+               
              <p> Per Seat</p>
              </div>
            
@@ -269,9 +272,9 @@
         </div>
 
         <div id="apply-hide" class=" flex lg:justify-between mt-5 ">
-            <input class=" bg-[#FFFFFF] " type="text"
+            <input id="coupun-code" class=" bg-[#FFFFFF] " type="text"
         placeholder="Have any copupon?">
-        <button id="apply" class="btn bg-[#1DD100] text-white">Apply</button>
+        <button onclick="(updateGranTotalCost('apply-btn'))" id="apply-btn" class="btn bg-[#1DD100] text-white">Apply</button>
         </div>
 
         <div class="flex gap-[80px] lg:justify-between mt-5 ">
@@ -308,7 +311,7 @@
     </div>
 
    <div class="flex justify-start lg:justify-center mb-6">
-    <button onclick="addBtn()" class="btn w-[300px] bg-[#1DD100] text-white font-bold">Next</button>
+    <button  onclick="addBtn()" class="btn w-[300px] bg-[#1DD100] text-white font-bold">Next</button>
    </div>
    <div class="flex flex-col lg:flex-row lg:justify-around">
     <p>Terms and Conditions</p>
