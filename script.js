@@ -36,6 +36,7 @@ const tr = document.createElement('tr')
 
  
       addElement(e.target.classList.add('bg-green-500'));
+
       updateTotalcost(price);
       updateGranTotalCost();
   
