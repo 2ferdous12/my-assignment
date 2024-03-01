@@ -6,14 +6,14 @@ function busTicket(){
     bttn.addEventListener('click', function(e){
 
       count = count + 1;
+     if(count > 4){
+      alert('User cannot book more then 4 seat');
+      return ;
+     }
       document.getElementById('bus-count').innerText = count;
   const btnName = (e.target.childNodes[1].innerText);
   const price = document.getElementById('main-price').innerText;
  
-const firstBusCount = getConvertValue('bus-count');
-if(firstBusCount + 1 > 5){
-  alert('limit complete');
-}
 
   const seat = getConvertValue('total-sit');
   document.getElementById('total-sit').innerText = seat - 1;
@@ -63,16 +63,17 @@ function updateGranTotalCost(status){
   }
   else{
     const copunCode = document.getElementById('coupun-code').value;
-    if(copunCode == 'Couple 20'){
-      const discount = totalcost * 0.2;
-      document.getElementById('Grand-total').innerText = totalcost - discount;
+    copunCode.innerText = '';
+    if(copunCode == "Couple 20"){
+      const discount = totalcost * 20 / 100;
+      document.getElementById('Grand-total').innerText = totalcost -  discount;
     }
-else if(copunCode == 'NEW15'){
-    const discount = totalcost * 0.15;
+else if(copunCode == "NEW15"){
+    const discount = totalcost * 15 / 100;
     document.getElementById('Grand-total').innerText = totalcost - discount;
     }
     else{
-      alert('please enter vaild coupon Code');
+      alert('invaild coupon Code');
     }
   }
   
@@ -82,11 +83,7 @@ else if(copunCode == 'NEW15'){
 }
 
 
-  function addBtn(){
-    removeElement('verify-section');
-    applyButton(catagory);
-    
-  }
+
 
   function getConvertValue(id){
     const price = document.getElementById(id).innerText;

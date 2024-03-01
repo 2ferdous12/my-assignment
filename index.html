@@ -190,7 +190,7 @@
         
         </div>
         <div class="flex justify-between mb-5 mt-10">
-            <div onclick="buyTickets()" class=" add-btn bg-gray-100 w-[70px] flex justify-center items-center h-[40px] rounded-lg">
+            <div onclick="buyTickets()" class=" bg-gray-100 w-[70px] flex justify-center items-center h-[40px] rounded-lg">
                 <p>A</p>
             </div>
             <div class=" add-btn bg-gray-100 w-[70px] flex justify-center items-center h-[40px] rounded-lg">
@@ -209,7 +209,7 @@
         </div>
 
         <div class="flex justify-between mb-5 ">
-            <div id="add-btn" class="add-btn bg-gray-100 w-[70px] flex justify-center items-center h-[40px] rounded-lg">
+            <div id="add-btn" class=" bg-gray-100 w-[70px] flex justify-center items-center h-[40px] rounded-lg">
                 <p>B</p>
             </div>
             <div id="add-btn" class="add-btn bg-gray-100 w-[70px] flex justify-center items-center h-[40px] rounded-lg">
@@ -226,7 +226,7 @@
             </div>
         </div>
        <div class="flex justify-between">
-            <div class="add-btn bg-gray-100 w-[70px] flex justify-center items-center h-[40px] rounded-lg">
+            <div class=" bg-gray-100 w-[70px] flex justify-center items-center h-[40px] rounded-lg">
                 <p>C</p>
             </div>
             <div class="add-btn bg-gray-100 w-[70px] flex justify-center items-center h-[40px] rounded-lg">
@@ -311,7 +311,26 @@
     </div>
 
    <div class="flex justify-start lg:justify-center mb-6">
-    <button  onclick="addBtn()" class="btn w-[300px] bg-[#1DD100] text-white font-bold">Next</button>
+
+
+
+<button class="btn w-[300px] bg-[#1DD100] text-white font-bold" onclick="my_modal_next.showModal()">Next</button>
+<dialog id="my_modal_next" class="modal modal-bottom sm:modal-middle">
+    <div class="bg-gray-100 lg:w-[800px] mx-auto h-[500px] flex justify-center items-center">
+        <div class="text-center space-y-5 bg-[#FFFFFF] p-6">
+      <img class="mx-auto" src="images/success.png" alt="">
+      <h3 class="text-xl text-[#1DD100] ">SUCCESS</h3>
+      <p class="mx-auto text-center">Thank you for Booking Our Bus Seats. <br>
+        We are working hard to find the best service and deals for <br>
+        Shortly you will find a confirmation in your email.</p>
+      <p></p>
+      <button class="btn bg-[#1DD100] p-4 text-white font-bold ">Continue</button>
+        </div>
+    </div>
+</dialog>
+
+
+
    </div>
    <div class="flex flex-col lg:flex-row lg:justify-around">
     <p>Terms and Conditions</p>
@@ -324,19 +343,7 @@
         </div>
     </section>
 
-    <section onclick="" id="verify-section" class=" add-btn hidden mt-7 mb-6">
-        <div class="bg-gray-100 lg:w-[1170px] mx-auto h-[500px] flex justify-center items-center">
-            <div class="text-center space-y-5 bg-[#FFFFFF] p-6">
-          <img class="mx-auto" src="images/success.png" alt="">
-          <h3 class="text-xl text-[#1DD100] ">SUCCESS</h3>
-          <p class="mx-auto text-center">Thank you for Booking Our Bus Seats. <br>
-            We are working hard to find the best service and deals for <br>
-            Shortly you will find a confirmation in your email.</p>
-          <p></p>
-          <button class="btn bg-[#1DD100] p-4 text-white font-bold ">Continue</button>
-            </div>
-        </div>
-    </section>
+
 
 
     <main>
